@@ -80,7 +80,19 @@
 
     <!-- Main JS File -->
     <script src="{{ url(asset('assets/js/main.js')) }}"></script>
-
+    <script src="{{ url(asset('assets/vendor/jquery/jquery.min.js')) }}"></script>
+    <script src="{{ url(asset('assets/vendor/countdown/countdown.jquery.js')) }}"></script>
+    <script>
+        $('#countdown').countdown({
+            year: {{ $config['conference']->year }}, // YYYY Format
+            month: {{ substr($config['conference']->date, 5, 2) }}, // 1-12
+            day: {{ substr($config['conference']->date, 8, 2) }}, // 1-31
+            hour: 9, // 24 hour format 0-23
+            minute: 0, // 0-59
+            second: 0, // 0-59
+            timezone: +7,
+        });
+    </script>
 </body>
 
 </html>
