@@ -139,7 +139,7 @@
 
     </section><!-- /Testimonials Section -->
 
-    <!-- Services Section -->
+    <!-- Call of Paper Section -->
     <section id="services" class="services section">
 
         <!-- Section Title -->
@@ -151,207 +151,115 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card position-relative z-1">
-                        <div class="service-icon">
-                            <i class="bi bi-palette"></i>
-                        </div>
-                        <a href="service-details.html"
-                            class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <h3>
-                            <a href="service-details.html">
-                                Creative <span>branding</span>
+                @foreach ($callofpaper as $paper)
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card position-relative z-1">
+                            <div class="service-icon">
+                                <i class="{{ $paper->icon }}"></i>
+                            </div>
+                            <a href="{{ $paper->link }}"
+                                class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                                <i class="bi bi-arrow-up-right"></i>
                             </a>
-                        </h3>
-                        <p>
-                            Nulla facilisi. Maecenas eget magna neque. Suspendisse potenti. Curabitur eleifend nisi
-                            non magna vulputate, vel condimentum libero tempus. Proin consectetur feugiat diam.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card position-relative z-1">
-                        <div class="service-icon">
-                            <i class="bi bi-gem"></i>
+                            <h3>
+                                <a href="{{ $paper->link }}">
+                                    {{ $paper->name }}
+                                </a>
+                            </h3>
+                            <p>
+                                {{ $paper->description }}
+                            </p>
                         </div>
-                        <a href="service-details.html"
-                            class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <h3>
-                            <a href="service-details.html">
-                                Design <span>systems</span>
-                            </a>
-                        </h3>
-                        <p>
-                            Praesent euismod varius tellus, vel bibendum nunc interdum at. Donec vehicula diam vel
-                            metus venenatis convallis. Aliquam erat volutpat. Etiam viverra magna sit amet.
-                        </p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card position-relative z-1">
-                        <div class="service-icon">
-                            <i class="bi bi-megaphone"></i>
-                        </div>
-                        <a href="service-details.html"
-                            class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <h3>
-                            <a href="service-details.html">
-                                Marketing <span>strategies</span>
-                            </a>
-                        </h3>
-                        <p>
-                            Vivamus tempor velit id magna dictum, sed fermentum nisi faucibus. Integer nec pretium
-                            sapien. Fusce tincidunt ligula et purus consequat, ac pellentesque nulla eleifend.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card position-relative z-1">
-                        <div class="service-icon">
-                            <i class="bi bi-code-slash"></i>
-                        </div>
-                        <a href="service-details.html"
-                            class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <h3>
-                            <a href="service-details.html">
-                                Digital <span>platforms</span>
-                            </a>
-                        </h3>
-                        <p>
-                            Cras fermentum odio eu feugiat malesuada. Vestibulum ante ipsum primis in faucibus orci
-                            luctus et accumsan cursus. Morbi placerat nulla vel nunc viverra accumsan.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card position-relative z-1">
-                        <div class="service-icon">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                        <a href="service-details.html"
-                            class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <h3>
-                            <a href="service-details.html">
-                                Growth <span>acceleration</span>
-                            </a>
-                        </h3>
-                        <p>
-                            Aenean vel augue vel nisi bibendum posuere. Phasellus in lacus quis urna sodales
-                            dignissim. Duis aliquam libero eget risus facilisis. Quisque eget libero vel nisl
-                            fringilla.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card position-relative z-1">
-                        <div class="service-icon">
-                            <i class="bi bi-camera-video"></i>
-                        </div>
-                        <a href="service-details.html"
-                            class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <h3>
-                            <a href="service-details.html">
-                                Media <span>solutions</span>
-                            </a>
-                        </h3>
-                        <p>
-                            Etiam efficitur lacus in diam finibus, nec ultrices est sagittis. Maecenas elementum
-                            magna sed risus faucibus, nec commodo purus facilisis. Vestibulum accumsan magna.
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
         </div>
 
     </section><!-- /Services Section -->
 
-    <!-- Steps Section -->
-    <section id="steps" class="steps section">
+    <!-- Speakers Section -->
+    <section id="team" class="team section light-background">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Steps</h2>
-            <div><span>How we</span> <span class="description-title">Work</span></div>
+            <div><span class="description-title">Opening Speech</span></div>
+            <h2></h2>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="steps-wrapper">
-
-                <div class="step-item" data-aos="fade-right" data-aos-delay="200">
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="bi bi-lightbulb"></i>
+            <div class="row justify-content-center">
+                @foreach ($opening as $item)
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member text-center">
+                            <div class="member-img">
+                                <img src="{{ url(asset('assets/img/speakers/' . $item->picture)) }}" class="img-fluid"
+                                    alt="" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h4>{{ $item->name }}</h4>
+                                {!! $item->description !!}
+                            </div>
                         </div>
-                        <div class="step-info">
-                            <span class="step-number">Step 01</span>
-                            <h3>Initial Consultation</h3>
-                            <p>Conducting thorough discovery sessions to understand your business requirements and
-                                objectives. Our expert team analyzes your needs to create a customized approach.</p>
-                        </div>
-                    </div>
-                </div><!-- End Step Item -->
-
-                <div class="step-item" data-aos="fade-left" data-aos-delay="300">
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="bi bi-gear"></i>
-                        </div>
-                        <div class="step-info">
-                            <span class="step-number">Step 02</span>
-                            <h3>Planning &amp; Strategy</h3>
-                            <p>Developing comprehensive strategies and detailed project plans based on the initial
-                                consultation. We create actionable roadmaps with clear milestones and deliverables.
-                            </p>
-                        </div>
-                    </div>
-                </div><!-- End Step Item -->
-
-                <div class="step-item" data-aos="fade-right" data-aos-delay="400">
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="bi bi-bar-chart"></i>
-                        </div>
-                        <div class="step-info">
-                            <span class="step-number">Step 03</span>
-                            <h3>Development Phase</h3>
-                            <p>Executing the planned strategies with precision and agility. Our team implements
-                                solutions while maintaining constant communication and progress updates.</p>
-                        </div>
-                    </div>
-                </div><!-- End Step Item -->
-
-                <div class="step-item" data-aos="fade-left" data-aos-delay="500">
-                    <div class="step-content">
-                        <div class="step-icon">
-                            <i class="bi bi-check2-circle"></i>
-                        </div>
-                        <div class="step-info">
-                            <span class="step-number">Step 04</span>
-                            <h3>Launch &amp; Support</h3>
-                            <p>Ensuring smooth deployment and providing ongoing support for implemented solutions.
-                                We monitor performance and make necessary adjustments for optimal results.</p>
-                        </div>
-                    </div>
-                </div><!-- End Step Item -->
-
+                    </div><!-- End Team Member -->
+                @endforeach
             </div>
-
         </div>
 
+        <!-- Section Title -->
+        <div class="container section-title mt-5" data-aos="fade-up">
+            <div><span class="description-title">Keynote Speech</span></div>
+            <h2></h2>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row justify-content-center gap-3">
+                @foreach ($speakers as $speaker)
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member text-center">
+                            <div class="member-img">
+                                <img src="{{ url(asset('assets/img/speakers/' . $speaker->picture)) }}" class="img-fluid"
+                                    alt="" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h4>{{ $speaker->name }}</h4>
+                                {!! $speaker->description !!}
+                            </div>
+                        </div>
+                    </div><!-- End Team Member -->
+                @endforeach
+            </div>
+        </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Important Dates Section -->
+    <section id="steps" class="steps section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <div><span>Important</span> <span class="description-title">Dates</span></div>
+            <h2></h2>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="steps-wrapper">
+                @foreach ($schedules as $index => $item)
+                    <div class="step-item" data-aos="{{ $index % 2 == 0 ? 'fade-right' : 'fade-left' }}"
+                        data-aos-delay="200">
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="{{ $item->icon }}"></i>
+                            </div>
+                            <div class="step-info">
+                                <span class="step-number">Step 0{{ $index + 1 }}</span>
+                                <h3>{{ $item->name }}</h3>
+                                <p>{!! $item->date !!}</p>
+                            </div>
+                        </div>
+                    </div><!-- End Step Item -->
+                @endforeach
+            </div>
+        </div>
     </section><!-- /Steps Section -->
 
     <!-- Call To Action Section -->
@@ -425,20 +333,6 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="testimonials-slider swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-   {
-     "slidesPerView": 1,
-     "loop": true,
-     "speed": 600,
-     "autoplay": {
-       "delay": 5000
-     },
-     "navigation": {
-       "nextEl": ".swiper-button-next",
-       "prevEl": ".swiper-button-prev"
-     }
-   }
- </script>
 
                 <div class="swiper-wrapper">
 

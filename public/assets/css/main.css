@@ -2251,39 +2251,36 @@ section,
 # Team Section
 --------------------------------------------------------------*/
 .team .team-member {
-  position: relative;
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 8px;
-  transition: 0.3s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 20px;
 }
 
 .team .team-member:hover {
   border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .team .team-member .member-img {
-  flex: 0 0 200px;
-  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .team .team-member .member-img img {
-  width: 200px;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.team .team-member .member-info {
-  padding: 25px;
-  text-align: left;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .team .team-member .member-info h4 {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   color: var(--heading-color);
 }
 
@@ -2291,8 +2288,7 @@ section,
   font-size: 0.9rem;
   font-weight: 400;
   color: color-mix(in srgb, var(--heading-color), transparent 30%);
-  display: block;
-  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
 .team .team-member .member-info p {
@@ -2328,6 +2324,7 @@ section,
 @media (max-width: 767px) {
   .team .team-member {
     flex-direction: column;
+    padding: 10px;
   }
 
   .team .team-member .member-img {
