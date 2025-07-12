@@ -9,23 +9,36 @@
                     <div class="content">
 
                         <div class="main-heading">
-                            <h1>CREATIVE <br>DESIGN</h1>
+                            <h1>{{ $config['conference']->name }}</h1>
                         </div>
 
                         <div class="divider"></div>
 
                         <div class="description">
-                            <p>Discover innovative strategies for impactful visual communication. We transform ideas
-                                into compelling realities, ensuring your brand stands out in a crowded marketplace.
-                                Our dedicated team leverages cutting-edge techniques to deliver exceptional results
-                                that resonate with your audience.</p>
+                            <p>{{ $config['conference']->theme }}</p>
                         </div>
 
-                        <div class="cta-button">
-                            <a href="#services" class="btn">
-                                <span>EXPLORE SERVICES</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
+                        <div class="d-flex gap-3">
+                            <div class="cta-button">
+                                <a href="#services" class="btn">
+                                    <span>Introduction</span>
+                                    <i class="bi bi-info-circle"></i>
+                                </a>
+                            </div>
+
+                            <div class="cta-button">
+                                <a href="#services" class="btn">
+                                    <span>Submit Here</span>
+                                    <i class="bi bi-upload"></i>
+                                </a>
+                            </div>
+
+                            <div class="cta-button">
+                                <a href="#services" class="btn">
+                                    <span>Poster ICoFA 2025</span>
+                                    <i class="bi bi-file-earmark-post"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -33,18 +46,13 @@
                 <div class="col-lg-5" data-aos="zoom-out">
                     <div class="visual-content">
                         <div class="fluid-shape">
-                            <img src="assets/img/abstract/abstract-1.webp" alt="Abstract Fluid Shape" class="fluid-img">
+                            <img src="{{ url(asset('assets/img/' . $config['conference']->logo)) }}"
+                                alt="Abstract Fluid Shape" class="fluid-img">
                         </div>
 
                         <div class="stats-card">
-                            <div class="stats-number">
-                                <h2>5K</h2>
-                            </div>
                             <div class="stats-label">
-                                <p>Successful Campaigns</p>
-                            </div>
-                            <div class="stats-arrow">
-                                <a href="#portfolio"><i class="bi bi-arrow-up-right"></i></a>
+                                <p class="text_uppercase">{{ $config['conference']->host }}</p>
                             </div>
                         </div>
                     </div>

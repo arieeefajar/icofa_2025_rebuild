@@ -192,7 +192,7 @@ h6 {
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 14px;
+  font-size: 0.9rem;
   padding: 8px 20px;
   margin: 0 0 0 30px;
   border-radius: 50px;
@@ -490,7 +490,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 80px;
   margin-right: 6px;
 }
 
@@ -504,6 +504,7 @@ h6 {
 
 .footer .footer-about p {
   font-size: 14px;
+  margin-top: 25px;
   font-family: var(--heading-font);
 }
 
@@ -835,11 +836,11 @@ section,
 }
 
 .hero .main-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero .main-heading h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -970,8 +971,9 @@ section,
   backdrop-filter: blur(10px);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 10px;
-  padding: 1.5rem;
-  width: 200px;
+  padding: 0 1.5rem 0 1.5rem;
+  text-align: center;
+  width: 300px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -994,12 +996,10 @@ section,
   line-height: 1;
 }
 
-.hero .stats-card .stats-label {
-  margin-top: 0.5rem;
-}
-
 .hero .stats-card .stats-label p {
-  font-size: 0.9rem;
+  font-size: 20px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 700;
   margin: 0;
 }
 
