@@ -77,11 +77,11 @@
     <script src="{{ url(asset('assets/vendor/swiper/swiper-bundle.min.js')) }}"></script>
     <script src="{{ url(asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')) }}"></script>
     <script src="{{ url(asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')) }}"></script>
+    <script src="{{ url(asset('assets/vendor/jquery/jquery.min.js')) }}"></script>
+    <script src="{{ url(asset('assets/vendor/countdown/countdown.jquery.js')) }}"></script>
 
     <!-- Main JS File -->
     <script src="{{ url(asset('assets/js/main.js')) }}"></script>
-    <script src="{{ url(asset('assets/vendor/jquery/jquery.min.js')) }}"></script>
-    <script src="{{ url(asset('assets/vendor/countdown/countdown.jquery.js')) }}"></script>
     <script>
         $('#countdown').countdown({
             year: {{ $config['conference']->year }}, // YYYY Format

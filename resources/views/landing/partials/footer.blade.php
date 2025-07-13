@@ -1,3 +1,34 @@
+<!-- Portfolio Section -->
+<section id="publish" class="publish section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <div><span>Start Publishing</span> <span class="description-title">Your Paper</span></div>
+        <h2></h2>
+    </div><!-- End Section Title -->
+
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 content text-center">
+                <p>Please upload your paper by pressing the <i class="bi bi-upload"></i> <strong>Upload Here</strong>
+                    button and make sure your paper meets our template requirements.</p>
+
+                <div class="d-flex justify-content-center mt-3 gap-3">
+                    <div class="cta-button">
+                        <a class="btn" href="{{ $config['conference']->register_link }}" target="_blank"><span>Upload
+                                Here</span>
+                            <i class="bi bi-upload"></i></a>
+                    </div>
+                    <div class="cta-button">
+                        <a class="btn" href="{{ $config['conference']->template_link }}"><span>Template
+                                Here</span> <i class="bi bi-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- /Portfolio Section -->
+
 <footer id="footer" class="footer">
 
     <div class="container footer-top">

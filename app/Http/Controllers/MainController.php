@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Link;
+use App\Models\Logo;
 use App\Models\Schedule;
 use App\Models\Speaker;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ class MainController extends Controller
     public function index()
     {
         if (request()->input('page') == '') {
+
             $data = [
                 'callofpaper' => Link::where('type', '1')->where('status', '1')->orderBy('lft', 'asc')->get(),
                 'schedules' => Schedule::where('status', '1')->orderBy('lft', 'asc')->get(),
