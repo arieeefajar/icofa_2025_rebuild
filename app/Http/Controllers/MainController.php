@@ -55,7 +55,7 @@ class MainController extends Controller
         $npage = 4;
         $downloads = Download::where('active', 1)->orderBy('lft', 'asc')->get();
 
-        return view('download', compact('page', 'npage', 'downloads'));
+        return view('landing.pages.download', compact('page', 'npage', 'downloads'));
     }
 
     public function pages($slug)
