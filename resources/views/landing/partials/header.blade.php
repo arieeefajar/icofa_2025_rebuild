@@ -12,31 +12,48 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Dropdown 1</a></li>
-                                <li><a href="#">Deep Dropdown 2</a></li>
-                                <li><a href="#">Deep Dropdown 3</a></li>
-                                <li><a href="#">Deep Dropdown 4</a></li>
-                                <li><a href="#">Deep Dropdown 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact</a></li>
+                @foreach (App\Models\MenuItem::getTree() as $parent)
+                    <?php
+					$has_child = App\Models\MenuItem::where('parent_id', $parent->id)->count();
+
+					if($has_child == 0){ ?>
+                    <li><a href="{{ $parent->link }}"
+                            target="_{{ $parent->type == 'internal_link' ? 'self' : 'blank' }}">{{ $parent->name }}</a>
+                    </li>
+                    <?php } else { ?>
+                    <li class="dropdown"><a href="{{ $parent->link }}"
+                            onclick="javascript:return false"><span>{{ $parent->name }}</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            @foreach ($parent->children as $child)
+                                <?php
+									$has_child1 = App\Models\MenuItem::where('parent_id', $child->id)->count();
+		
+									if($has_child1 == 0){ ?>
+                                <li><a href="{{ $child->link }}"
+                                        target="_{{ $child->type == 'internal_link' ? 'self' : 'blank' }}">{{ $child->name }}</a>
+                                </li>
+
+                                <?php } else { ?>
+                                <li class="dropdown"><a href="{{ $child->link }}"
+                                        onclick="javascript:return false"><span>{{ $child->name }}</span> <i
+                                            class="bi bi-chevron-right toggle-dropdown"></i></a>
+
+                                    <ul>
+                                        @foreach ($child->children as $child2)
+                                            <li><a href="{{ $child2->link }}"
+                                                    target="_{{ $child2->type == 'internal_link' ? 'self' : 'blank' }}">{{ $child2->name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+
+                                </li>
+                                <?php } ?>
+                            @endforeach
+                        </ul>
+                    </li>
+                    <?php } ?>
+                @endforeach
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

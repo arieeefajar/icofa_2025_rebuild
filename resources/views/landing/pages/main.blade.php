@@ -139,8 +139,8 @@
 
     </section><!-- /Testimonials Section -->
 
-    <!-- Call of Paper Section -->
-    <section id="services" class="services section">
+    <!-- Call for Paper Section -->
+    <section id="callforpaper" class="services section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -179,7 +179,7 @@
     </section><!-- /Services Section -->
 
     <!-- Speakers Section -->
-    <section id="team" class="team section light-background">
+    <section id="speaker" class="team section light-background">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -292,7 +292,7 @@
     </section><!-- /Links Section -->
 
     <!-- Conference Venue Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    <section id="venue" class="testimonials section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <div><span>Conference</span> <span class="description-title">Venue</span></div>
