@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Panel extends Model
 {
     use HasFactory;
-    protected $table = '2024_panels';
+    protected $table = 'panels';
     protected $fillable = [
         'name',
         'description',

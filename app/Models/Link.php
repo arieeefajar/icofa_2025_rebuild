@@ -9,7 +9,7 @@ class Link extends Model
 {
     use HasFactory;
 
-    protected $table = '2024_links';
+    protected $table = 'links';
     protected $fillable = [
         'name',
         'description',

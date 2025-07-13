@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     use HasFactory;
-    protected $table = '2024_schedules';
+    protected $table = 'schedules';
     protected $fillable = [
         'name',
         'date',

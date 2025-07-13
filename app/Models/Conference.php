@@ -9,7 +9,7 @@ class Conference extends Model
 {
     use HasFactory;
 
-    protected $table = '2024_conferences';
+    protected $table = 'conferences';
     protected $fillable = [
         'name',
         'alias',

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Logo extends Model
 {
     use HasFactory;
-    protected $table = '2024_logos';
+    protected $table = 'logos';
 }
