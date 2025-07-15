@@ -9,8 +9,7 @@
             <h2></h2>
         </div><!-- End Section Title -->
 
-        <div class="container">
-
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-12">
                     <table class="table table-dark table-striped table-bordered">

@@ -1,4 +1,4 @@
-<header id="header" class="header d-flex align-items-center fixed-top">
+a<header id="header" class="header d-flex align-items-center fixed-top">
     <div
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -15,10 +15,11 @@
                 @foreach (App\Models\MenuItem::getTree() as $parent)
                     <?php
 					$has_child = App\Models\MenuItem::where('parent_id', $parent->id)->count();
-
+                    
 					if($has_child == 0){ ?>
                     <li><a href="{{ $parent->link }}"
-                            target="_{{ $parent->type == 'internal_link' ? 'self' : 'blank' }}">{{ $parent->name }}</a>
+                            target="_{{ $parent->type == 'internal_link' ? 'self' : 'blank' }}"
+                            class="{{ request()->input('page') == $parent->link ? 'active' : '' }}">{{ $parent->name }}</a>
                     </li>
                     <?php } else { ?>
                     <li class="dropdown"><a href="{{ $parent->link }}"
