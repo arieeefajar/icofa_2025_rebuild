@@ -29,7 +29,7 @@
     </div>
 </section><!-- /Portfolio Section -->
 
-<footer id="footer" class="footer">
+<footer id="contact" class="footer">
 
     <div class="container footer-top">
         <div class="row gy-4">

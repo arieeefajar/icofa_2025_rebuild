@@ -66,7 +66,7 @@ class MainController extends Controller
         if ($pages != null) {
             $page = ['title' => $pages->title, 'content' => $pages->content];
 
-            return view('page', compact('page', 'npage'));
+            return view('landing.pages.page', compact('page', 'npage'));
         } else {
             abort(404);
         }
