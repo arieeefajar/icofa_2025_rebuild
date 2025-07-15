@@ -7,9 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class MenuItem extends Model
 {
+    // use CrudTrait;
     use HasFactory;
+
     protected $table = 'menu_items';
     protected $fillable = ['name', 'type', 'link', 'page_id', 'parent_id', 'status'];
+
+    public function parent()
+    {
+        return $this->belongsTo('Backpack\MenuCRUD\app\Models\MenuItem', 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany('Backpack\MenuCRUD\app\Models\MenuItem', 'parent_id');
+    }
+
+    public function page()
+    {
+        return $this->belongsTo('Backpack\PageManager\app\Models\Page', 'page_id');
+    }
 
     /**
      * Get all menu items, in a hierarchical collection.

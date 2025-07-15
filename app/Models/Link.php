@@ -9,7 +9,6 @@ class Link extends Model
 {
     use HasFactory;
 
-    protected $table = 'links';
     protected $fillable = [
         'name',
         'description',
@@ -20,6 +19,10 @@ class Link extends Model
         'order',
     ];
 
+    /**
+     * Get all menu items, in a hierarchical collection.
+     * Only supports 2 levels of indentation.
+     */
     public static function getTree($type)
     {
         $menu = self::orderBy('lft')->where('type', $type)->where('status', 1)->get();
