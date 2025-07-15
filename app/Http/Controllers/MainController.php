@@ -46,7 +46,7 @@ class MainController extends Controller
         $npage = 2;
         $panels = Panel::where('active', 1)->get();
 
-        return view('presentation-schedule', compact('page', 'npage', 'panels'));
+        return view('landing.pages.presentation_schedule', compact('page', 'npage', 'panels'));
     }
 
     public function download()
