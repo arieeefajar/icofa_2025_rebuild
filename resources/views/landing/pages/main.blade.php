@@ -84,7 +84,7 @@
                 <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
                     <div class="about-image text-center">
                         <img src="{{ url(asset('assets/img/' . $config['conference']->chairman_picture)) }}"
-                            class="img-fluid rounded-4 shadow-sm mx-auto d-block mb-3" alt="About Image" loading="lazy">
+                            class="img-fluid rounded-4 mx-auto d-block mb-3" alt="About Image" loading="lazy">
 
                         <div class="chairman-badge px-4 py-3">
                             <strong class="name d-block">{{ $config['conference']->chairman_name }}</strong>

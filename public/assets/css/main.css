@@ -1061,6 +1061,10 @@ section,
     overflow: hidden;
 }
 
+.about .about-image img {
+    filter: drop-shadow(5px 15px 25px rgba(0, 0, 0, 0.9));
+}
+
 .about .about-image .experience-badge {
     position: absolute;
     bottom: 30px;
