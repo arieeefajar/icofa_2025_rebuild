@@ -215,7 +215,7 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row justify-content-center gap-3">
                 @foreach ($speakers as $speaker)
-                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col" data-aos="fade-up" data-aos-delay="100">
                         <div class="team-member text-center">
                             <div class="member-img">
                                 <img src="{{ url(asset('assets/img/speakers/' . $speaker->picture)) }}" class="img-fluid"
